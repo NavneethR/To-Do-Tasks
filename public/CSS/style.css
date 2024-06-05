@@ -6,7 +6,7 @@
   border-radius: 10px;
 }
 
-.todo-title {
+.task-title {
   text-align: center;
 }
   
@@ -40,18 +40,18 @@ tr:nth-child(even) {
   cursor: pointer;
 }
   
-.new-todo, .update-todo {
+.new-task, .update-task {
   max-width: 786px;
   margin: auto;
 }
   
-.form-group, .new-todo .form-group, .update-todo .form-group {
+.form-group, .new-task .form-group, .update-task .form-group {
     margin: 0.4em 0;
 }
   
   .form-group input[type="text"],
-  .new-todo .form-group input[type="text"],
-  .update-todo .form-group input[type="text"] {
+  .new-task .form-group input[type="text"],
+  .update-task .form-group input[type="text"] {
     width: 100%;
     padding: 0.6em 1em;
     margin: 0.5em 0;

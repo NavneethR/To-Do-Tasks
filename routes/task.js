@@ -5,6 +5,10 @@ const controller = require('../controllers/controls')
 
 router.post("/add-new-task",controller.addTaskController);
 
+router.post("/update-task/:id",controller.updateTaskController);
+
+router.get("/confirm-delete",controller.deleteTaskController);
+
 router.get("/add-new-task",controller.addTaskFormController);
 
 router.get("/",controller.homeController);

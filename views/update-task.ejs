@@ -1,22 +1,37 @@
-<%- include('partials/header') %>
+<%- include("partials/header") %>
     <div class="table-container">
-        <h1>Update a task</h1>
-        <a class='btn' href="/">Back</a>
-        <br>
-        <br>
-        <div>
-            <table>
-                <tr>
-                    <th>Task title</th>
-                    <th>Task description</th>
-                </tr>
-                <tr>    
-                    <td><input type="text" placeholder="task title"></td>
-                    <td><input type="text" placeholder="task description"></td>
-                </tr>
-            </table>
-        </div>
-        <br><br>
-        <a class="btn" href="/">Save</a>
+      <h2 class="task-title">Update task</h2>
+
+      <div>
+        <a class="btn" href="/">Back</a>
+
+        <form action="/update-task/<%=task._id%>" method="post">
+          <div class="update-task">
+            <div class="form-group">
+              <label for="title" class="text-light">Title</label>
+              <input
+                type="text"
+                name="title"
+                value="<%= task.title %>"
+                placeholder="Type task here"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="desc" class="text-light">Description</label>
+              <input
+                type="text"
+                name="desc"
+                value="<%=task.desc%>"
+                placeholder="Type description here"
+              />
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="btn">Save</button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
 <%- include("partials/footer") %>
